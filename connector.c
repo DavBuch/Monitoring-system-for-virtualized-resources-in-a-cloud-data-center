@@ -32,7 +32,7 @@ int main() {
    }
 
 
-    fp = fopen("test.txt", "r");
+    fp = fopen("send.txt", "r");
     if (fp == NULL)
         exit(EXIT_FAILURE);
 
@@ -48,7 +48,7 @@ int main() {
         p = strtok (NULL, ":");
 
      }
-sprintf(query," INSERT INTO `db_memory`.`pagefault`(`idXEN`,`idVM`,`time`,`process_id`,`faultadresss`,`faultacccess`,`page_type`,`fault_entry_time`) VALUES (%s, %s,%s, %s, '%s', '%s', '%s', %s);", array[0],array[1],array[2],array[3],array[4],array[5],array[6],strtok(array[7], "\n"));
+sprintf(query," INSERT INTO `db_memory`.`pagefault`(`idXEN`,`idVM`,`time`,`process_id`,`faultadresss`,`faultacccess`,`page_type`,`fault_entry_time`) VALUES (%s, %s,%s, %s, '%s', '%s', '%s', %s);",1, array[0],array[1],array[2],array[3],array[4],array[5],array[6], "\n"));
 printf("%s", query);
 if (mysql_query(conn,query)   !=0)                
 	{                                                                                                  
